@@ -72,11 +72,12 @@ banner() {
   ${GREEN}     ▒████ ░▒██▒░ ▓██▄   ▒██▀▀██░▒███   ▓██ ░▄█ ▒
   ${GREEN}    ░▓█▒   ░░██░  ▒  ██▒ ░▓█ ░██ ▒▓█  ▄ ▒██▀▀█▄  
   ${GREEN}    ░▒█░    ░██░▒██████▒░▓█▒░██▓░▒████▒░██▓ ▒██▒
-  ${RED}        ▒ ░   ░▓  ▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒░░ ▒░ ░░ ▒▓ ░▒▓░
-  ${RED}        ░      ▒ ░░ ░▒  ░ ░ ▒ ░▒░ ░ ░ ░  ░  ░▒ ░ ▒░
-  ${RED}        ░ ░    ▒ ░░  ░  ░   ░  ░░ ░   ░     ░░   ░      ${RED}Version : 7.6
-  ${RED}        ░        ░   ░  ░  ░   ░  ░   ░     
-		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by The Jatin Kalwar (Yourhackinghouse)${WHITE}
+  ${RED}       ▒ ░   ░▓  ▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒░░ ▒░ ░░ ▒▓ ░▒▓░
+  ${RED}       ░      ▒ ░░ ░▒  ░ ░ ▒ ░▒░ ░ ░ ░  ░  ░▒ ░ ▒░
+  ${RED}       ░ ░    ▒ ░░  ░  ░   ░  ░░ ░   ░     ░░   ░      
+  ${RED}       ░        ░   ░  ░  ░   ░  ░   ░   
+  ${RED}                           Version : 7.6
+		${GREEN}[${WHITE}-${GREEN}]${GREEN} Tool Created by The Jatin Kalwar (Yourhackinghouse)${WHITE}
 	EOF
 }
 
