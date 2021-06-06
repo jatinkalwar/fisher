@@ -451,7 +451,7 @@ site_vk() {
 ## Menu
 main_menu() {
 	{ clear; banner; echo; }
-     echo -e "\e[92m[\e[91m1\e[92m]\e[93m Start\e[93m"
+     echo -e "\e[92m[\e[91m1\e[92m]\e[93m Start Hacking\e[93m"
      echo -e "\e[92m[\e[91m2\e[92m]\e[93m About Me\e[93m"
      echo -e "\e[92m[\e[91m3\e[92m]\e[93m Practicle Video\e[93m"
      echo -e "\e[92m[\e[91m4\e[92m]\e[93m Visit Our Website\e[93m"
