@@ -65,16 +65,15 @@ kill_pid() {
 ## Banner
 banner() {
 	cat <<- EOF
-		${ORANGE}
-		${ORANGE} ______      _     _     _               
-		${ORANGE}|___  /     | |   (_)   | |              
-		${ORANGE}   / / _ __ | |__  _ ___| |__   ___ _ __ 
-		${ORANGE}  / / | '_ \| '_ \| / __| '_ \ / _ \ '__|
-		${ORANGE} / /__| |_) | | | | \__ \ | | |  __/ |   
-		${ORANGE}/_____| .__/|_| |_|_|___/_| |_|\___|_|   
-		${ORANGE}      | |                                
-		${ORANGE}      |_|                ${RED}Version : 7.6
-
+                 ${ORANGE}           /$$$$$$$$ /$$$$$$  /$$$$$$  /$$   /$$ /$$$$$$$$ /$$$$$$$ 
+                 ${ORANGE}          | $$_____/|_  $$_/ /$$__  $$| $$  | $$| $$_____/| $$__  $$
+                 ${ORANGE}          | $$        | $$  | $$  \__/| $$  | $$| $$      | $$  \ $$
+                 ${ORANGE}          | $$$$$     | $$  |  $$$$$$ | $$$$$$$$| $$$$$   | $$$$$$$/
+                 ${ORANGE}          | $$__/     | $$   \____  $$| $$__  $$| $$__/   | $$__  $$
+                 ${ORANGE}          | $$        | $$   /$$  \ $$| $$  | $$| $$      | $$  \ $$
+                 ${ORANGE}          | $$       /$$$$$$|  $$$$$$/| $$  | $$| $$$$$$$$| $$  | $$
+                 ${ORANGE}          |__/      |______/ \______/ |__/  |__/|________/|__/  |__/    ${RED}Version : 7.6
+       
 		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by The Jatin Kalwar (Yourhackinghouse)${WHITE}
 	EOF
 }
@@ -82,10 +81,13 @@ banner() {
 ## Small Banner
 banner_small() {
 	cat <<- EOF
-		${BLUE}
-		${BLUE}  ░▀▀█░█▀█░█░█░▀█▀░█▀▀░█░█░█▀▀░█▀▄
-		${BLUE}  ░▄▀░░█▀▀░█▀█░░█░░▀▀█░█▀█░█▀▀░█▀▄
-		${BLUE}  ░▀▀▀░▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀${WHITE} 2.1
+	                
+                      ${BLUE}           ███████╗██╗░██████╗██╗░░██╗███████╗██████╗░   
+                      ${BLUE}           ██╔════╝██║██╔════╝██║░░██║██╔════╝██╔══██╗
+                      ${BLUE}           █████╗░░██║╚█████╗░███████║█████╗░░██████╔╝
+                      ${BLUE}           ██╔══╝░░██║░╚═══██╗██╔══██║██╔══╝░░██╔══██╗
+                      ${BLUE}           ██║░░░░░██║██████╔╝██║░░██║███████╗██║░░██║
+                      ${BLUE}           ╚═╝░░░░░╚═╝╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝   ${WHITE} 2.1
 	EOF
 }
 
@@ -489,11 +491,13 @@ am start -a android.intent.action.VIEW -d https://forms.gle/qcLLqJZ2U94sFzrF6 > 
 bash fisher.sh
 elif [ $opt1 = "8" ];
 then
-exit 1
-else
-echo -e "                      \e[93m !....OOPS \e[0m"
-fi
-     }
+		msg_exit
+	else
+		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
+		{ sleep 1; main_menu; }
+	fi
+}
+
 ##JATT
 jatt() {
     	{ clear; banner; echo; }
