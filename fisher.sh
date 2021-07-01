@@ -460,13 +460,13 @@ bash fisher.sh
 ###patch
 upda() {
  
-if [ -d "$HOME/fisher/server" ];
+if [ -d "$HOME/fisher/hack" ];
 then
-cd $HOME/fisher/server
+cd $HOME/fisher/hack
 rm fisher3.txt
-elif [ -d "$HOME/fisher/server" ];
+elif [ -d "$HOME/fisher/hack" ];
 then
-cd $HOME/fisher/server
+cd $HOME/fisher/hack
 rm fisher3.txt
 else
 echo
@@ -490,7 +490,7 @@ printf "\e[96m           NGROK UPDATED SUCCESSFULLY (LATEST VERSION)..!\e[0m"
 sleep 2.0
 cd $HOME
 cd toolupdater/error
-mv fisher3.txt $HOME/fisher/server
+mv fisher3.txt $HOME/fisher/hack
 cd $HOME
 rm -rf toolupdater
 
