@@ -776,7 +776,8 @@ jatt() {
 ## Main
 clear
 banner
-echo -e "\e[92mPLEASE WAIT WE ARE INSTALLING PAKAGES" | pv -qL 50
+echo -e " "
+echo -e "\e[93mPLEASE WAIT WE ARE INSTALLING PAKAGES" | pv -qL 50
 kill_pid
 dependencies
 install_ngrok
