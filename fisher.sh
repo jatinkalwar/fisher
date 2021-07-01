@@ -541,6 +541,7 @@ echo -ne "SELECT OPTION ~> \e[0m"
 read opt1
 if [ $opt1 = "1" ];
 then
+clear
         cd $HOME/fisher
 wget -L https://raw.githubusercontent.com/jatinkalwar/toolupdater/main/error/fisher3.txt 2>/dev/null
 banner
@@ -556,6 +557,7 @@ clear
   jatt
         
 else
+clear
 echo " "
 echo -e "               \e[34m ============================\e[34m"
 echo -e "               \e[34m |     \e[93mOOPS WRONG KEY...!\e[34m   |"
@@ -566,7 +568,7 @@ echo -e "               \e[34m |            [OR]          |"
 echo -e "               \e[34m |\e[92m    https://bit.ly/3AeiAuD\e[34m|"
 echo -e "               \e[34m ============================\e[34m"
 echo " "
-sleep 3.0
+sleep 5.0
 fi
 main_menu
 
