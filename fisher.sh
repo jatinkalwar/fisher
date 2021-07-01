@@ -575,7 +575,7 @@ main_menu
 elif [ $opt1 = "2" ];
 then
 am start -a android.intent.action.VIEW -d https://gplinks.co/8QcyEeAZ > /dev/null
-bash fisher.sh
+main_menu
 
 elif [ $opt1 = "3" ];
 then
