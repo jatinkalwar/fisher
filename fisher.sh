@@ -37,7 +37,7 @@ echo ''
 echo -e "\e[93mPlease Wait It Will Take Only Few Minutes. This Is Only One Time"
 echo -e "\e[93mProcess After Install."
 echo ''
-cd $HOME/m-bomber2.O/Additional
+cd $HOME/fisher/Additional
 bash h1.sh
 fix
 
