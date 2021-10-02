@@ -277,6 +277,7 @@ echo -e "\e[92m[\e[34m3\e[92m]\e[92m---\e[92mABOUT\e[0m"
 echo -e "\e[92m[\e[34m4\e[92m]\e[92m---\e[92mMORE\e[0m"
 echo -e "\e[92m[\e[34m5\e[92m]\e[92m---\e[92mACCESS KEY\e[0m"
 echo -e "\e[92m[\e[34m6\e[92m]\e[92m---\e[92mRESTART\e[0m"
+echo -e "\e[92m[\e[34m7\e[92m]\e[92m---\e[92mLOGOUT\e[0m"
 echo -e "\e[92m[\e[34m0\e[92m]\e[92m---\e[92mEXIT\e[0m"
 echo 
 echo -ne "\e[92mSelect Option\e[0m: \e[92m" 
@@ -333,9 +334,15 @@ menu
 elif [[ "$iput" = "6" || "$iput" = "six" ]];
 then
 bash fisher.sh
-#elif [[ "$iput" = "7" || "$iput" = "seven" ]];
-#then
-#am start -a android.intent.action.VIEW -d https://tinyurl.com/whatschat > /dev/null 2>&1
+elif [[ "$iput" = "7" || "$iput" = "seven" ]];
+then
+cd $HOME/fisher/Additional
+rm save.txt
+clear
+banner
+figlet LOGOUT | lolcat
+echo 'BYE....... TATA.........' | lolcat
+	
 #elif [[ "$iput" = "8" || "$iput" = "eight" ]];
 #then
 #bash fisher.sh
