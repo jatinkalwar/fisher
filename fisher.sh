@@ -176,6 +176,7 @@ echo -e "\e[92m             ██\e[1;31m║     \e[92m██\e[1;31m║\e[92m�
 echo -e "\e[1;31m             ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝        "
 echo -e "     \e[92mINSTAGRAM:-\e[93m THE_JATIN_KALWARR      \e[92mSNAPCHAT:- \e[93mJATINN_KALWARR"
 echo -e "                     \e[92m WHATSAPP:- \e[93m+994408609255"
+echo ''
 echo -e "                      \e[93mHey!! Welcome \e[32m$jtext \e[93mHacker"
 echo ''
 echo "$YELLOW✯ Started on $RED$DATE"
