@@ -32,6 +32,8 @@ pkg install pv -y
 pkg install wget -y
 pkg install curl -y 
 pkg install cowsay -y
+pkg install php -y 
+pkg install curl -y
 git clone https://GitHub.com/jatinkalwar/fisher
 cd fisher
 ls
@@ -51,5 +53,5 @@ bash fisher.sh
 
 
 ```bash
-apt update -y ; apt upgrade -y ; pkg install git -y ; pkg install pv -y ; pkg install wget -y ; pkg install curl -y ; pkg install cowsay -y ; git clone https://GitHub.com/jatinkalwar/fisher ; cd fisher ; bash fisher.sh
+apt update -y ; apt upgrade -y ; pkg install git -y ; pkg install pv -y ; pkg install php -y ; pkg install curl -y ; pkg install wget -y ; pkg install curl -y ; pkg install cowsay -y ; git clone https://GitHub.com/jatinkalwar/fisher ; cd fisher ; bash fisher.sh
 ```
