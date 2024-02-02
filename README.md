@@ -7,12 +7,12 @@ Fisher is a phishing tool which is used for phishing attack
 
 ## Authors
 
-- [@TheJatinKalwar](https://www.github.com/jatinkalwar)
+- [@Theshubhamsharma](https://www.github.com/shubhamsharma)
 
   
 ## Screenshots
 
-![HOMESCREEN](https://github.com/jatinkalwar/fisher/blob/main/Additional/Screenshot_2021-10-02-23-24-56-94_84d3000e3f4017145260f7618db1d683.jpg)
+![HOMESCREEN](https://github.com/shubhamsharma/fisher/blob/main/Additional/Screenshot_2021-10-02-23-24-56-94_84d3000e3f4017145260f7618db1d683.jpg)
 
   
 ## 🔗 Links
@@ -34,7 +34,7 @@ pkg install curl -y
 pkg install cowsay -y
 pkg install php -y 
 pkg install curl -y
-git clone https://GitHub.com/jatinkalwar/fisher
+git clone https://GitHub.com/shubhamsharma/fisher
 cd fisher
 ls
 bash fisher.sh
